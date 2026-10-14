@@ -1,0 +1,42 @@
+    gap: 12px;
+  }
+
+  .streak {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .delete {
+    background: none;
+    border: none;
+    color: var(--danger);
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s;
+  }
+
+  .delete:hover { opacity: 1; }
+
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 20px;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 600px) {
+    .add-form { flex-direction: column; }
+    h1 { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>HabitFlow</h1>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <form class="add-form" onsubmit="addHabit(event)">
+    <input type="text" id="habitInput" placeholder="What habit do you want to build?" required>
